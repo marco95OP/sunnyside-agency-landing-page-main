@@ -25,14 +25,24 @@
     text-align: center;
 }
 
+html {
+    height: -webkit-fill-available; /* We have to fix html height */
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
 /*HEADER SECTION*/
 header{
     display: flex;
     flex-direction: column;
     background: url(./images/mobile/image-header.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
 }
 
 nav{
@@ -92,7 +102,6 @@ header .arrow{
 
 .brand-info{
     padding: 20px;
-    margin-top: 20px;
     font-family: var(--barlow-600);
     font-size: 18px;
     color: var(--very-dark-grayish-blue);
@@ -125,17 +134,78 @@ header .arrow{
 
 .sect-3 {
     background: url(./images/mobile/image-graphic-design.jpg);
-    min-height: 100vh;
+    min-height: 90vh; /*if I set 100vh the content will be collapsed down to the next section*/
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px;
 }
-/*
-.sect-3 .brand-content .brand-title{
-    
-} */
 
-.sect-3 p{
-    margin-bottom: 5px;
+ .sect-3 .brand-info,
+ .sect-3 .brand-title{
+    color: var(--graphic-design-text);
+}
+
+.sect-4{
+    background: url(./images/mobile/image-photography.jpg);
+    min-height: 90vh; /*if I set 100vh the content will be collapsed down to the next section*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sect-4 h2,
+.sect-4 p{
+    color: var(--photography-text);
+}
+
+.sect-4 .text-content,
+.sect-3 .text-content{
+    margin-bottom: 3em;
+}
+/*END OF MAIN CONTENT*/
+
+/*TESTIMONIAL*/
+.container{
+    margin-top: 50px;
+}
+
+.container h3.title{
+    font-family: var(--fraunces-700-900);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--grayish-blue)
+}
+
+.wrapper{
+    margin-top: 50px;
+}
+
+.wrapper img{
+    border-radius: 100px;
+}
+
+.box-content h3{
+    font-family: var(--fraunces-700-900);
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+.box-content p{
+    font-family: var(--barlow-600);
+    font-size: 18px;
+    color: var(--grayish-blue);
+    margin: 10px;
+}
+.box-content .box-info{
+    color: var(--very-dark-desaturated-blue);
+    padding: 30px;
 }
