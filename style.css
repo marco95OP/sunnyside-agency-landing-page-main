@@ -45,10 +45,7 @@ header{
     min-height: 90vh;
 }
 
-nav{
-    display: flex;
-    flex-direction: flex-end;
-}
+/* ---- NAVBAR -----*/
 
 img.logo{
     margin: 20px;
@@ -56,17 +53,64 @@ img.logo{
     cursor: pointer;
 }
 
-nav img.icon-hamburger{
+header img.hamburger-icon{
     position: absolute;
     cursor: pointer;
     top: 25px;
     right: 25px;
 }
 
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffcf8;;
+    width: 90%;
+    font-family: var(--barlow-600);
+    font-size: 20px;
+    position: absolute;
+    top: 100px;
+    left: 18px;
+    min-height: 50vh;
+    display: none;
+}
+
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    margin: 1.5em;
+}
+nav a{
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+nav button{
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--bg-btn-yellow);
+    font-family: var(--fraunces-700-900);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+nav button a{
+    color: black;
+    font-size: 15px;
+}
+
 .nav-links{
     display: none;
 }
 
+.nav-links.active{
+    display: block;
+}
+
+/*END OF NAVBAR*/
+
+/*HEADER*/
 header h1{
     font-family: var(--fraunces-700-900);
     text-transform: uppercase;
