@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -15,80 +17,88 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
 </head>
+
 <body>
   <header>
     <img class="logo" src="./images/logo.svg" alt="logo">
-    <img class ="hamburger-icon" src="./images/icon-hamburger.svg" alt="hamburger">
-      
-      <nav>
-          <ul class="nav-links">
-            <li><a href="#">About</a></li> 
-            <li><a href="#">Services</a></li> 
-            <li><a href="#">Projects</a></li> 
-            <li><button><a href="#">Contact</a></button></li> 
-          </ul>
-      </nav>
+
+    <nav class="navTopLevel closed" id='mainNav' aria-label="Main">
+      <img src="./images/icon-hamburger.svg" id="menuButton" class="icon" aria-expanded="false"
+        aria-controls="menuItems">
+      <ul id="menuItems">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <button>Contact</button>
+      </ul>
+    </nav>
+
     <div class="center-content">
       <h1>We are creatives</h1>
       <img class="arrow" src="./images/icon-arrow-down.svg" alt="arrow-down">
     </div>
-  </header>  
+  </header>
 
   <section id="main-content">
-    
+
     <div class="sect-1">
-      <img class="bg-brand" src="./images/mobile/image-transform.jpg" alt="" >
+      <img class="bg-brand" src="./images/mobile/image-transform.jpg" alt="">
       <div class="brand-content">
         <h2 class="brand-title">Transform your brand</h2>
-        <p class="brand-info">We are a full-service creative agency specializing in helping brands grow fast. 
+        <p class="brand-info">We are a full-service creative agency specializing in helping brands grow fast.
           Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <button class="btn-yellow">Learn more</button> 
+        <button class="btn-yellow">Learn more</button>
       </div>
     </div>
 
     <div class="sect-2">
-      <img class="bg-brand" src="./images/mobile/image-stand-out.jpg" alt="" >
+      <img class="bg-brand" src="./images/mobile/image-stand-out.jpg" alt="">
       <div class="brand-content">
         <h2 class="brand-title">Stand out to the right audience</h2>
-        <p class="brand-info"> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
-        <button class="btn-pink">Learn more</button> 
+        <p class="brand-info"> Using a collaborative formula of designers, researchers, photographers, videographers,
+          and copywriters, we’ll build and extend your brand in digital places. </p>
+        <button class="btn-pink">Learn more</button>
       </div>
     </div>
 
     <div class="sect-3">
-        <div class="text-content">
-          <h2 class="brand-title">Graphic design</h2>
-          <p class="brand-info">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p> 
-        </div>
+      <div class="text-content">
+        <h2 class="brand-title">Graphic design</h2>
+        <p class="brand-info">Great design makes you memorable. We deliver artwork that underscores your brand message
+          and captures potential clients’ attention.</p>
+      </div>
     </div>
-    
+
 
     <div class="sect-4">
-        <div class="text-content">
-          <h2 class="brand-title">Photography</h2>
-          <p class="brand-info">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p> 
-        </div>
+      <div class="text-content">
+        <h2 class="brand-title">Photography</h2>
+        <p class="brand-info">Increase your credibility by getting the most stunning, high-quality photos that improve
+          your business image.</p>
+      </div>
     </div>
   </section>
-  
+
   <section id="testimonials">
 
     <div class="container">
-        <h3 class="title">Client testimonials</h3>
+      <h3 class="title">Client testimonials</h3>
 
       <div class="wrapper">
-          <img src="./images/image-emily.jpg" alt="emily">
-          <div class="box-content">
-            <p class="box-info">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p> 
-            <h3>Emily R.</h3>
-            <p>Marketing Director</p>
-          </div>
+        <img src="./images/image-emily.jpg" alt="emily">
+        <div class="box-content">
+          <p class="box-info">We put our trust in Sunnyside and they delivered, making sure our needs were met and
+            deadlines were always hit.</p>
+          <h3>Emily R.</h3>
+          <p>Marketing Director</p>
+        </div>
       </div>
 
       <div class="wrapper">
         <img src="./images/image-thomas.jpg" alt="thomas">
         <div class="box-content">
-          <p class="box-info">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p> 
+          <p class="box-info">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a
+            satisfying and enjoyable experience.</p>
           <h3>Thomas S.</h3>
           <p>Chief Operating Officer</p>
         </div>
@@ -97,7 +107,8 @@
       <div class="wrapper">
         <img src="./images/image-jennie.jpg" alt="jennie">
         <div class="box-content">
-          <p class="box-info"> Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+          <p class="box-info"> Incredible end result! Our sales increased over 400% when we worked with Sunnyside.
+            Highly recommended!</p>
           <h3>Jennie F.</h3>
           <p>Business Owner</p>
         </div>
@@ -107,12 +118,12 @@
   </section>
 
   <div class="image-gallery">
-      <div class="image-box">
-        <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="">
-        <img src="./images/mobile/image-gallery-orange.jpg" alt="">
-        <img src="./images/mobile/image-gallery-cone.jpg" alt="">
-        <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="">
-      </div>
+    <div class="image-box">
+      <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="">
+      <img src="./images/mobile/image-gallery-orange.jpg" alt="">
+      <img src="./images/mobile/image-gallery-cone.jpg" alt="">
+      <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+    </div>
   </div>
 
   <footer>
@@ -130,4 +141,5 @@
     </div>
   </footer>
 </body>
+
 </html>

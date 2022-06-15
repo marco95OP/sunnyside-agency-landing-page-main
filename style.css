@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 
-:root{
+:root {
     /*Primary*/
     --bg-btn-soft-red: hsl(7, 99%, 70%);
     --bg-btn-yellow: hsl(51, 100%, 49%);
@@ -18,7 +18,7 @@
     --fraunces-700-900: 'Fraunces', serif;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -26,7 +26,8 @@
 }
 
 html {
-    height: -webkit-fill-available; /* We have to fix html height */
+    height: -webkit-fill-available;
+    /* We have to fix html height */
 }
 
 body {
@@ -35,7 +36,7 @@ body {
 }
 
 /*HEADER SECTION*/
-header{
+header {
     display: flex;
     flex-direction: column;
     background: url(./images/mobile/image-header.jpg);
@@ -45,73 +46,98 @@ header{
     min-height: 90vh;
 }
 
-/* ---- NAVBAR -----*/
-
-img.logo{
+img.logo {
     margin: 20px;
     width: 40%;
     cursor: pointer;
 }
 
-header img.hamburger-icon{
+/* ---- NAVBAR -----*/
+
+nav #menuButton {
     position: absolute;
-    cursor: pointer;
-    top: 25px;
-    right: 25px;
+    top: 23px;
+    right: 30px;
 }
 
-nav{
+ul#menuItems {
+    left: 36px;
+    padding: 30px;
+    margin-top: 20px;
+    transform: translateY(30px);
+}
+
+.opened ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fffcf8;;
-    width: 90%;
-    font-family: var(--barlow-600);
-    font-size: 20px;
     position: absolute;
-    top: 100px;
-    left: 18px;
-    min-height: 50vh;
-    display: none;
+    z-index: 1;
+    width: 80%;
+    background-color: white;
+    list-style-type: none;
+
 }
 
-nav ul{
-    list-style-type: none;
-}
-nav li{
-    margin: 1.5em;
-}
-nav a{
+.opened ul a {
     text-decoration: none;
+    font-family: var(--barlow-600);
     color: var(--dark-grayish-blue);
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
 }
-nav button{
-    padding: 20px 30px;
-    border-radius: 30px;
+
+.navTopLevel.opened a {
+    display: block;
+    text-align: center;
+}
+
+#menuItems button {
+    padding: 15px 30px;
     border: none;
     background-color: var(--bg-btn-yellow);
+    border-radius: 25px;
     font-family: var(--fraunces-700-900);
-    font-weight: 900;
     text-transform: uppercase;
-}
-nav button a{
-    color: black;
     font-size: 15px;
+    margin: 20px;
 }
 
-.nav-links{
+.closed ul {
     display: none;
 }
 
-.nav-links.active{
-    display: block;
+
+@media screen and (min-width: 800px) {
+
+    .navTopLevel button.icon {
+        display: none;
+    }
+
+    .navTopLevel li {
+        display: inline-block;
+        height: 2em;
+        margin-top: 1em;
+        line-height: 1em;
+    }
+
+    .closed ul,
+    .opened ul {
+        display: inherit;
+    }
+
+    button.aria-expanded {
+        transition: all ease-in-out 2s;
+    }
 }
 
 /*END OF NAVBAR*/
 
 /*HEADER*/
-header h1{
+header h1 {
     font-family: var(--fraunces-700-900);
     text-transform: uppercase;
     font-size: 2.5em;
@@ -121,37 +147,38 @@ header h1{
     margin-top: 80px;
 }
 
-header .arrow{
+header .arrow {
     margin-top: 35px;
     width: 40px;
 }
+
 /*END OF HEADER*/
 
 /*MAIN CONTENT*/
 
-.bg-brand{
+.bg-brand {
     width: 100%;
 }
 
-.brand-content{
+.brand-content {
     background-color: var(--white)
 }
 
-.brand-title{
+.brand-title {
     font-family: var(--fraunces-700-900);
     font-size: 35px;
     font-weight: 900;
     margin-top: 50px;
 }
 
-.brand-info{
+.brand-info {
     padding: 20px;
     font-family: var(--barlow-600);
     font-size: 18px;
     color: var(--very-dark-grayish-blue);
 }
 
-.btn-yellow{
+.btn-yellow {
     background: none;
     border: none;
     cursor: pointer;
@@ -162,7 +189,7 @@ header .arrow{
     margin-bottom: 50px;
 }
 
-.btn-pink{
+.btn-pink {
     background: none;
     border: none;
     cursor: pointer;
@@ -172,13 +199,14 @@ header .arrow{
     text-decoration: underline 3px var(--bg-btn-soft-red);
 }
 
-.sect-2 .brand-title{
+.sect-2 .brand-title {
     padding: 10px;
 }
 
 .sect-3 {
     background: url(./images/mobile/image-graphic-design.jpg);
-    min-height: 90vh; /*if I set 100vh the content will be collapsed down to the next section*/
+    min-height: 90vh;
+    /*if I set 100vh the content will be collapsed down to the next section*/
     background-size: cover;
     background-position: center;
     display: flex;
@@ -188,16 +216,19 @@ header .arrow{
     margin-top: 50px;
 }
 
- .sect-3 .brand-info,
- .sect-3 .brand-title{
+.sect-3 .brand-info,
+.sect-3 .brand-title {
     color: var(--graphic-design-text);
 }
 
-.sect-4{
+.sect-4 {
     background: url(./images/mobile/image-photography.jpg);
-    min-height: 90vh; /*if I set 100vh the content will be collapsed down to the next section*/
-    background-size: cover; /*with this property work done also with 100vh min-height*/
-    background-position: center; /*with this property work done also with 100vh min-height*/
+    min-height: 90vh;
+    /*if I set 100vh the content will be collapsed down to the next section*/
+    background-size: cover;
+    /*with this property work done also with 100vh min-height*/
+    background-position: center;
+    /*with this property work done also with 100vh min-height*/
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -206,22 +237,23 @@ header .arrow{
 }
 
 .sect-4 h2,
-.sect-4 p{
+.sect-4 p {
     color: var(--photography-text);
 }
 
 .sect-3 .text-content,
-.sect-4 .text-content{
+.sect-4 .text-content {
     margin-bottom: 3em;
 }
+
 /*END OF MAIN CONTENT*/
 
 /*TESTIMONIAL*/
-.container{
+.container {
     margin-top: 50px;
 }
 
-.container h3.title{
+.container h3.title {
     font-family: var(--fraunces-700-900);
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -230,46 +262,50 @@ header .arrow{
     color: var(--grayish-blue)
 }
 
-.wrapper{
+.wrapper {
     margin-top: 50px;
 }
 
-.wrapper img{
+.wrapper img {
     border-radius: 100px;
 }
 
-.box-content h3{
+.box-content h3 {
     font-family: var(--fraunces-700-900);
     font-weight: 900;
     font-size: 1.5em;
     margin-top: 20px;
 }
-.box-content p{
+
+.box-content p {
     font-family: var(--barlow-600);
     font-size: 18px;
     color: var(--grayish-blue);
     margin: 10px;
 }
-.box-content .box-info{
+
+.box-content .box-info {
     color: var(--very-dark-desaturated-blue);
     padding: 30px;
 }
+
 /*END OF TESTIMONIAL*/
 
 /*IMAGE GALLERY*/
-.image-box{
+.image-box {
     margin-top: 50px;
     display: grid;
     /*to put the image side by side in a column of 2*/
     grid-template-columns: 1fr 1fr;
 }
 
-.image-box img{
+.image-box img {
     width: 100%;
 }
+
 /*END OF IMAGE GALLERY*/
 /*FOOTER*/
-footer{
+footer {
     min-height: 40vh;
     display: flex;
     background-color: hsl(167, 44%, 70%);
@@ -277,14 +313,14 @@ footer{
     align-items: center;
 }
 
-footer .bg-logo{
+footer .bg-logo {
     margin-top: 50px;
     width: 50%;
     /*to modify the color of the logo*/
     filter: invert(27%) sepia(5%) saturate(4598%) hue-rotate(116deg) brightness(45%) contrast(80%);
 }
 
-footer ul{
+footer ul {
     margin-top: 30px;
     list-style-type: none;
     font-family: var(--barlow-600);
@@ -294,15 +330,16 @@ footer ul{
     color: var(--bg-color-footer);
 }
 
-footer .social{
+footer .social {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 40px;
 }
 
-footer .social img{
+footer .social img {
     background: none;
     margin: 10px;
 }
+
 /*END OF FOOTER*/
