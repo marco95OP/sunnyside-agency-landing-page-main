@@ -52,7 +52,18 @@ img.logo {
     cursor: pointer;
 }
 
+
 /* ---- NAVBAR -----*/
+
+.shape {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #fff;
+    border-left: 100px solid transparent;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
 
 nav #menuButton {
     position: absolute;
@@ -96,14 +107,19 @@ ul#menuItems {
 }
 
 #menuItems button {
-    padding: 15px 30px;
     border: none;
     background-color: var(--bg-btn-yellow);
     border-radius: 25px;
+    padding: 0 10px;
+    margin: 20px;
+}
+
+#menuItems button a {
     font-family: var(--fraunces-700-900);
+    color: black;
     text-transform: uppercase;
     font-size: 15px;
-    margin: 20px;
+    font-weight: 900;
 }
 
 .closed ul {
@@ -253,13 +269,14 @@ header .arrow {
     margin-top: 50px;
 }
 
-.container h3.title {
+#testimonials h3.title {
     font-family: var(--fraunces-700-900);
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 15px;
     font-weight: 900;
-    color: var(--grayish-blue)
+    color: var(--grayish-blue);
+    margin: 6em;
 }
 
 .wrapper {
@@ -315,7 +332,8 @@ footer {
 
 footer .bg-logo {
     margin-top: 50px;
-    width: 50%;
+    width: 30%;
+    cursor: pointer;
     /*to modify the color of the logo*/
     filter: invert(27%) sepia(5%) saturate(4598%) hue-rotate(116deg) brightness(45%) contrast(80%);
 }
@@ -330,6 +348,15 @@ footer ul {
     color: var(--bg-color-footer);
 }
 
+footer ul a {
+    text-decoration: none;
+    color: #327969;
+}
+
+footer ul a:hover {
+    color: white;
+}
+
 footer .social {
     display: flex;
     flex-direction: row;
@@ -340,6 +367,216 @@ footer .social {
 footer .social img {
     background: none;
     margin: 10px;
+    cursor: pointer;
 }
 
 /*END OF FOOTER*/
+
+/* MEDIA QUERY FOR RESPONSIVE LAYOUT */
+@media screen and (min-width: 800px) {
+
+    header {
+        background: url('./images/mobile/image-header.jpg');
+        background-position: 50% 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    header img.logo {
+        width: 20%;
+        margin: 35px;
+        cursor: pointer;
+    }
+
+    /* Hide the hamburger menu in desktop mode */
+    .navTopLevel img {
+        display: none;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    ul#menuItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        margin-right: 10px;
+    }
+
+    /* To alline the list-items next to the button */
+    ul#menuItems li {
+        line-height: normal;
+    }
+
+    ul#menuItems a:hover {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.39);
+    }
+
+    ul#menuItems a {
+        padding: 0 30px;
+        text-decoration: none;
+        font-family: var(--barlow-600);
+        color: white;
+        font-size: 18px;
+    }
+
+    ul#menuItems button {
+        background-color: white;
+        margin: 5px;
+        padding: 15px 0px;
+    }
+
+    ul#menuItems button:hover {
+        background: rgba(255, 255, 255, 0.39);
+        color: #fff;
+    }
+
+    ul#menuItems button a {
+        color: black;
+        font-family: var(--fraunces-700-900);
+        font-size: 16px;
+    }
+
+    ul#menuItems button a:hover {
+        border: none;
+    }
+
+    /* ABOUT SECTION AND SERVICE SECTION*/
+    .sect-1 .brand-content {
+        order: -1;
+    }
+
+    .sect-1,
+    .sect-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .brand-content,
+    .brand-title,
+    .brand-info {
+        text-align: left;
+    }
+
+    .brand-title {
+        font-size: 25px;
+        margin: 20px;
+    }
+
+    .brand-info {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .brand-content .btn-yellow,
+    .brand-content .btn-pink {
+        margin-left: 40px;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    /* PROJECTS SECTION */
+    .wrapper-project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wrapper-project .sect-3 {
+        margin-top: 0px;
+    }
+
+    .wrapper-project .brand-title,
+    .wrapper-project .brand-info {
+        text-align: center;
+    }
+
+    /* TESTIMONIAL SECTION */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* IMAGE GALLERY SECTION */
+    .image-gallery {
+        margin-top: 100px;
+    }
+
+    .image-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+
+/* DESKTOP LAYOUT */
+@media screen and (min-width: 1024px) {
+    header img.logo {
+        width: 20%;
+        margin: 35px;
+    }
+
+    /* Hide the hamburger menu in desktop mode */
+    .navTopLevel img {
+        display: none;
+    }
+
+    ul#menuItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        margin-right: 10px;
+    }
+
+    /* To alline the list-items next to the button */
+    ul#menuItems li {
+        line-height: normal;
+    }
+
+    ul#menuItems a {
+        padding: 0 30px;
+        text-decoration: none;
+        font-family: var(--barlow-600);
+        color: white;
+        font-size: 18px;
+    }
+
+    ul#menuItems button {
+        background-color: white;
+        margin: 5px;
+        padding: 15px 0px;
+    }
+
+    ul#menuItems button a {
+        color: black;
+        font-family: var(--fraunces-700-900);
+        font-size: 16px;
+    }
+
+    /* ABOUT SECTION */
+    .sect-1 .brand-title,
+    .sect-2 .brand-title {
+        margin: 20px;
+        padding: 20px;
+        font-size: 40px;
+    }
+
+    .sect-1 .brand-info,
+    .sect-2 .brand-info {
+        padding: 30px;
+        font-size: 18px;
+        line-height: 1.5em;
+    }
+
+    .sect-1 .btn-yellow,
+    .sect-2 .btn-pink {
+        margin-left: 50px;
+    }
+}

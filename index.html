@@ -20,16 +20,19 @@
 
 <body>
   <header>
+    <!-- <img src="./images/mobile/image-header.jpg" alt="" class="bg-hero"> -->
+
     <img class="logo" src="./images/logo.svg" alt="logo">
 
     <nav class="navTopLevel closed" id='mainNav' aria-label="Main">
       <img src="./images/icon-hamburger.svg" id="menuButton" class="icon" aria-expanded="false"
         aria-controls="menuItems">
       <ul id="menuItems">
+        <div class="shape"></div>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
-        <button>Contact</button>
+        <button><a href="#contact">Contact</a></button>
       </ul>
     </nav>
 
@@ -41,7 +44,7 @@
 
   <section id="main-content">
 
-    <div class="sect-1">
+    <div id="about" class="sect-1">
       <img class="bg-brand" src="./images/mobile/image-transform.jpg" alt="">
       <div class="brand-content">
         <h2 class="brand-title">Transform your brand</h2>
@@ -51,7 +54,7 @@
       </div>
     </div>
 
-    <div class="sect-2">
+    <div id="services" class="sect-2">
       <img class="bg-brand" src="./images/mobile/image-stand-out.jpg" alt="">
       <div class="brand-content">
         <h2 class="brand-title">Stand out to the right audience</h2>
@@ -61,28 +64,29 @@
       </div>
     </div>
 
-    <div class="sect-3">
-      <div class="text-content">
-        <h2 class="brand-title">Graphic design</h2>
-        <p class="brand-info">Great design makes you memorable. We deliver artwork that underscores your brand message
-          and captures potential clients’ attention.</p>
+    <div class="wrapper-project">
+      <div id="projects" class="sect-3">
+        <div class="text-content">
+          <h2 class="brand-title">Graphic design</h2>
+          <p class="brand-info">Great design makes you memorable. We deliver artwork that underscores your brand message
+            and captures potential clients’ attention.</p>
+        </div>
       </div>
-    </div>
 
-
-    <div class="sect-4">
-      <div class="text-content">
-        <h2 class="brand-title">Photography</h2>
-        <p class="brand-info">Increase your credibility by getting the most stunning, high-quality photos that improve
-          your business image.</p>
+      <div class="sect-4">
+        <div class="text-content">
+          <h2 class="brand-title">Photography</h2>
+          <p class="brand-info">Increase your credibility by getting the most stunning, high-quality photos that improve
+            your business image.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="testimonials">
+    <h3 class="title">Client testimonials</h3>
 
     <div class="container">
-      <h3 class="title">Client testimonials</h3>
 
       <div class="wrapper">
         <img src="./images/image-emily.jpg" alt="emily">
@@ -126,12 +130,13 @@
     </div>
   </div>
 
-  <footer>
+  <footer id="contact">
     <img class="bg-logo" src="./images/logo.svg" alt="logo">
     <ul>
-      <li>About</li>
-      <li>Services</li>
-      <li>Projects</li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+
     </ul>
     <div class="social">
       <img src="./images/icon-facebook.svg" alt="">
